@@ -13,7 +13,7 @@ export default function AssemblyPage() {
 
   useEffect(() => {
     // Simulate progress animation through all steps then redirect
-    const t1 = setTimeout(() => { setPercentage(28); setStep(1) }, 400)
+    const t1 = setTimeout(() => { setPercentage(28); setStep(1) }, 1000)
     const t2 = setTimeout(() => { setPercentage(52); setStep(2) }, 1800)
     const t3 = setTimeout(() => { setPercentage(78); setStep(3) }, 3200)
     const t4 = setTimeout(() => { setPercentage(100); setStep(4) }, 4800)

@@ -11,7 +11,7 @@ const TOTAL_SEGMENTS = 4
 const TOTAL_GAP = GAP_DEG * TOTAL_SEGMENTS
 const AVAILABLE_DEG = 270 - TOTAL_GAP
 const SEGMENT_DEG = AVAILABLE_DEG / TOTAL_SEGMENTS
-const START_ANGLE = 135 // start from bottom-left
+const START_ANGLE = 225 // start from bottom-left
 
 function polarToCartesian(cx: number, cy: number, r: number, angleDeg: number) {
   const rad = ((angleDeg - 90) * Math.PI) / 180

@@ -20,9 +20,10 @@ const sessions: SessionFolder[] = [
     label: "Session 03",
     expanded: true,
     files: [
-      { name: "S03_discovery_task.mp4", duration: "12:34" },
-      { name: "S03_drive_session.mp4", duration: "08:17" },
-      { name: "S03_debrief.mp4", duration: "05:42" },
+      { name: "S03_discovery_task.mp4", duration: "08:17" },
+      { name: "S03_drive_session1.mp4", duration: "14:03" },
+      { name: "S03_debrief.mp4", duration: "06:51" },
+      { name: "S03_drive_session2.mp4", duration: "11:29" },
     ],
   },
   { label: "Session 04" },

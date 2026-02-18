@@ -42,8 +42,15 @@ function SlackCard() {
               </p>
               {/* Embedded card thumbnail */}
               <div className="flex items-center gap-2.5 mt-1 p-2 rounded-md bg-[#151515] border border-border/40">
-                <div className="relative w-14 h-9 rounded bg-gradient-to-br from-[#242424] to-[#1a1a1a] shrink-0 flex items-center justify-center">
-                  <Play className="w-3 h-3 text-coral/60 fill-coral/60" />
+                <div className="relative w-14 h-9 rounded overflow-hidden shrink-0">
+                  <img
+                    src="/image2.jpg"
+                    alt="Brief thumbnail"
+                    className="absolute inset-0 w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+                    <Play className="w-3 h-3 text-coral fill-coral" />
+                  </div>
                 </div>
                 <div className="flex flex-col gap-0.5 min-w-0">
                   <span className="text-[10px] font-sans font-medium text-foreground/80 truncate">
@@ -85,26 +92,32 @@ function PresentationCard() {
 
       {/* Slide preview mockup */}
       <div className="mx-4 mb-4 rounded-lg border border-border/60 overflow-hidden">
-        <div className="relative aspect-[16/9] bg-[#0e0e0e] flex flex-col items-center justify-center gap-3 px-6">
+        <div className="relative aspect-[16/9] bg-[#0e0e0e] overflow-hidden">
+          <img
+            src="/image2.jpg"
+            alt="Brief thumbnail"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-black/70" />
+
           {/* Coral accent line top */}
           <div className="absolute top-0 left-0 right-0 h-[3px] bg-coral" />
 
           {/* Slide content */}
-          <h4
-            className="text-[13px] font-sans font-bold text-foreground text-center leading-tight tracking-tight"
-            style={{ fontFamily: "var(--font-bricolage), sans-serif" }}
-          >
-            In-Vehicle UX Friction Map Q1
-          </h4>
-
-          {/* Stats row */}
-          <div className="flex items-center gap-3">
-            <span className="text-[9px] font-mono font-bold text-coral bg-coral/10 px-1.5 py-0.5 rounded">42% fail</span>
-            <span className="text-[9px] font-mono font-bold text-amber bg-amber/10 px-1.5 py-0.5 rounded">2.4s glance</span>
-            <span className="text-[9px] font-mono font-bold text-lime bg-lime/10 px-1.5 py-0.5 rounded">58% phys</span>
+          <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 px-6">
+            <h4
+              className="text-[13px] font-sans font-bold text-foreground text-center leading-tight tracking-tight"
+              style={{ fontFamily: "var(--font-bricolage), sans-serif" }}
+            >
+              In-Vehicle UX Friction Map Q1
+            </h4>
+            <div className="flex items-center gap-3">
+              <span className="text-[9px] font-mono font-bold text-coral bg-coral/10 px-1.5 py-0.5 rounded">42% fail</span>
+              <span className="text-[9px] font-mono font-bold text-amber bg-amber/10 px-1.5 py-0.5 rounded">2.4s glance</span>
+              <span className="text-[9px] font-mono font-bold text-lime bg-lime/10 px-1.5 py-0.5 rounded">58% phys</span>
+            </div>
           </div>
 
-          {/* Decorative bottom bar */}
           <div className="absolute bottom-3 left-6 right-6 h-px bg-border/40" />
           <span className="absolute bottom-1.5 right-6 text-[7px] font-mono text-muted-foreground/30">INSIGHTCUTS</span>
         </div>

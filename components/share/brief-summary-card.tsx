@@ -15,8 +15,12 @@ export function BriefSummaryCard() {
       <div className="flex flex-col md:flex-row gap-0">
         {/* 16:9 thumbnail */}
         <div className="relative w-full md:w-[320px] aspect-video md:aspect-auto md:h-auto shrink-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-[#1e1e1e] via-[#151515] to-[#0a0a0a]" />
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,92,58,0.06)_0%,transparent_60%)]" />
+          <img
+            src="/image2.jpg"
+            alt="Brief thumbnail"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-black/40" />
 
           {/* Play icon */}
           <div className="absolute inset-0 flex items-center justify-center">

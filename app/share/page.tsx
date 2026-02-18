@@ -42,7 +42,7 @@ export default function SharePage() {
         {/* Bottom notice */}
         <div className="text-center pb-8">
           <p className="text-xs font-mono text-muted-foreground/50">
-            Recipients can view the brief in their browser — no account needed.
+            Recipients can view the brief in their browser.
           </p>
         </div>
       </main>

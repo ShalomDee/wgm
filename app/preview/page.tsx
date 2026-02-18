@@ -28,8 +28,8 @@ export default function PreviewPage() {
         {/* Video player */}
         <BriefPlayer />
 
-        {/* Clip thumbnails strip */}
-        <PreviewClipStrip />
+        {/* Clip thumbnails strip
+        <PreviewClipStrip /> */}
       </main>
     </div>
   )

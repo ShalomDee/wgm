@@ -28,11 +28,12 @@ const videos: VideoData[] = [
     ],
     gradientFrom: "#2a1f1f",
     gradientTo: "#1f2a27",
+    thumbnailUrl: "/image6.png",
   },
   {
     id: "2",
     participant: "Participant 07 \u00b7 Female, 28",
-    fileLabel: "S07_drive_session.mp4",
+    fileLabel: "S03_drive_session1.mp4",
     duration: "14:03",
     tags: [
       { label: "Safety Signal", color: "#AADC32" },
@@ -40,11 +41,12 @@ const videos: VideoData[] = [
     ],
     gradientFrom: "#1f1f2a",
     gradientTo: "#2a261f",
+    thumbnailUrl: "/image8.jpg",
   },
   {
     id: "3",
     participant: "Participant 05 \u00b7 Male, 41",
-    fileLabel: "S05_debrief.mp4",
+    fileLabel: "S03_debrief.mp4",
     duration: "06:51",
     tags: [
       { label: "Control Discovery", color: "#FF5C3A" },
@@ -52,11 +54,12 @@ const videos: VideoData[] = [
     ],
     gradientFrom: "#261f2a",
     gradientTo: "#1f2a22",
+    thumbnailUrl: "/image1.jpg",
   },
   {
     id: "4",
     participant: "Participant 12 \u00b7 Female, 55",
-    fileLabel: "S12_drive_session.mp4",
+    fileLabel: "S03_drive_session2.mp4",
     duration: "11:29",
     tags: [
       { label: "Glance Duration", color: "#F5A623" },
@@ -64,13 +67,12 @@ const videos: VideoData[] = [
     ],
     gradientFrom: "#1f2a2a",
     gradientTo: "#2a1f22",
+    thumbnailUrl: "/image3.png", 
   },
 ]
 
-const defaultSelected = new Set(["1", "2"])
-
 export function VideoGrid() {
-  const [selected, setSelected] = useState<Set<string>>(defaultSelected)
+  const [selected, setSelected] = useState<Set<string>>(new Set())
 
   const toggleSelect = (id: string) => {
     setSelected((prev) => {
@@ -126,6 +128,7 @@ export function VideoGrid() {
               onToggle={() => toggleSelect(video.id)}
               gradientFrom={video.gradientFrom}
               gradientTo={video.gradientTo}
+              thumbnailUrl={video.thumbnailUrl}
             />
           ))}
         </div>

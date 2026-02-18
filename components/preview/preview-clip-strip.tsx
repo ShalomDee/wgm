@@ -6,31 +6,30 @@ const CLIPS = [
   {
     label: "Control failure",
     color: "#FF5C3A",
-    gradientFrom: "from-[#2a1a18]",
-    gradientTo: "to-[#1f1412]",
     time: "00:00",
+    thumbnailUrl: "/image6.png",
+    caption: "P03 attempts to adjust climate — reaches for touchscreen instead of knob",
   },
   {
     label: "Glance 2.4s",
     color: "#F5A623",
-    gradientFrom: "from-[#2a2218]",
-    gradientTo: "to-[#1f1c12]",
     time: "00:24",
-    active: true,
+    thumbnailUrl: "/image8.jpg",
+    caption: "Eyes off road for 2.4s during nav input. Audible hesitation before tap.",
   },
   {
     label: "Knob quote",
     color: "#AADC32",
-    gradientFrom: "from-[#1e2a18]",
-    gradientTo: "to-[#181f12]",
     time: "00:51",
+    thumbnailUrl: "/image1.jpg",
+    caption: "\"I kept expecting a physical dial — my hand just went there automatically\"",
   },
   {
     label: "Task comparison",
     color: "#A855F7",
-    gradientFrom: "from-[#221a2a]",
-    gradientTo: "to-[#1c141f]",
     time: "01:14",
+    thumbnailUrl: "/image3.png",
+    caption: "P12 completes same task 40% faster in Condition B with rotary control",
   },
 ]
 
@@ -50,21 +49,17 @@ export function PreviewClipStrip() {
           >
             {/* Thumbnail */}
             <div
-              className={`relative w-full aspect-video rounded-lg bg-gradient-to-br ${clip.gradientFrom} ${clip.gradientTo} overflow-hidden transition-all duration-200 ${
+              className={`relative w-full aspect-video rounded-lg overflow-hidden transition-all duration-200 ${
                 isActive
                   ? "ring-2 ring-coral shadow-[0_0_12px_rgba(255,92,58,0.2)]"
                   : "border border-border/40 opacity-50 hover:opacity-75"
               }`}
             >
-              {/* Subtle grain */}
-              <div
-                className="absolute inset-0 opacity-[0.03]"
-                style={{
-                  backgroundImage:
-                    "repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255,255,255,0.5) 2px, rgba(255,255,255,0.5) 3px)",
-                }}
+              <img
+                src={clip.thumbnailUrl}
+                alt={clip.label}
+                className="absolute inset-0 w-full h-full object-cover"
               />
-
               {/* Color dot */}
               <div
                 className="absolute top-2 right-2 w-2.5 h-2.5 rounded-full"
