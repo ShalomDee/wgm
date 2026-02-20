@@ -1,13 +1,13 @@
-import { AppHeader } from "@/components/app-header"
+import { PreviewHeader } from "@/components/preview/preview-header"
 import { FlowStepBar } from "@/components/flow-step-bar"
 import { BriefPlayer } from "@/components/preview/brief-player"
 import { PreviewClipStrip } from "@/components/preview/preview-clip-strip"
+import { LayoutPanel } from "@/components/preview/layout-panel"
 
 export default function PreviewPage() {
   return (
     <div className="flex flex-col h-screen bg-background">
-      {/* Header */}
-      <AppHeader />
+      <PreviewHeader />
       <FlowStepBar currentStep={4} />
 
       {/* Breadcrumb bar */}
@@ -23,14 +23,17 @@ export default function PreviewPage() {
         </div>
       </div>
 
-      {/* Main content area */}
-      <main className="flex-1 flex flex-col items-center justify-center gap-8 px-6 py-8 overflow-y-auto">
-        {/* Video player */}
-        <BriefPlayer />
+      {/* Body: two-column flex row */}
+      <div className="flex flex-1 overflow-hidden">
+        {/* Left/Center: Video player area */}
+        <main className="flex-1 flex flex-col items-center gap-8 px-6 py-8 overflow-y-auto">
+          <BriefPlayer />
+          <PreviewClipStrip />
+        </main>
 
-        {/* Clip thumbnails strip
-        <PreviewClipStrip /> */}
-      </main>
+        {/* Right: Layout Panel */}
+        <LayoutPanel />
+      </div>
     </div>
   )
 }
