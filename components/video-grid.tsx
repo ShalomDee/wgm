@@ -1,8 +1,6 @@
 "use client"
 
-import { useState } from "react"
 import { VideoCard } from "./video-card"
-import { SelectionBar } from "./selection-bar"
 import { LayoutGrid, List } from "lucide-react"
 
 interface VideoData {
@@ -71,21 +69,12 @@ const videos: VideoData[] = [
   },
 ]
 
-export function VideoGrid() {
-  const [selected, setSelected] = useState<Set<string>>(new Set())
+interface VideoGridProps {
+  selected: Set<string>
+  onToggle: (id: string) => void
+}
 
-  const toggleSelect = (id: string) => {
-    setSelected((prev) => {
-      const next = new Set(prev)
-      if (next.has(id)) {
-        next.delete(id)
-      } else {
-        next.add(id)
-      }
-      return next
-    })
-  }
-
+export function VideoGrid({ selected, onToggle }: VideoGridProps) {
   return (
     <div className="flex flex-col flex-1 overflow-hidden">
       {/* Toolbar */}
@@ -125,7 +114,7 @@ export function VideoGrid() {
               duration={video.duration}
               tags={video.tags}
               selected={selected.has(video.id)}
-              onToggle={() => toggleSelect(video.id)}
+              onToggle={() => onToggle(video.id)}
               gradientFrom={video.gradientFrom}
               gradientTo={video.gradientTo}
               thumbnailUrl={video.thumbnailUrl}
@@ -133,9 +122,6 @@ export function VideoGrid() {
           ))}
         </div>
       </div>
-
-      {/* Bottom selection bar */}
-      <SelectionBar count={selected.size} />
     </div>
   )
 }

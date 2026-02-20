@@ -20,9 +20,9 @@ export function SceneVideoPlayer({ markers }: SceneVideoPlayerProps) {
   const { setNodeRef, isOver } = useDroppable({ id: TIMELINE_DROPPABLE_ID })
 
   return (
-    <div className="flex flex-col gap-0">
-      {/* Video viewport: dark bg, centered play, prev/next */}
-      <div className="relative aspect-video bg-[#0a0a0a] rounded-xl overflow-hidden">
+    <div className="flex flex-col gap-0 shrink-0">
+      {/* Video viewport: capped at 45vh so tabs + AI cards stay visible without scroll */}
+      <div className="relative aspect-video max-h-[45vh] w-full bg-[#0a0a0a] rounded-t-xl overflow-hidden">
         <div className="absolute inset-0 flex items-center justify-center">
           <button
             type="button"
@@ -46,6 +46,12 @@ export function SceneVideoPlayer({ markers }: SceneVideoPlayerProps) {
         >
           <ChevronRight className="w-5 h-5" />
         </button>
+
+        {/* Faint gradient fade at bottom to hint at content below */}
+        <div
+          className="absolute inset-x-0 bottom-0 h-20 pointer-events-none bg-gradient-to-t from-black/40 to-transparent"
+          aria-hidden
+        />
       </div>
 
       {/* Droppable timeline with markers */}

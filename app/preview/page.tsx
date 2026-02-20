@@ -1,7 +1,6 @@
 import { PreviewHeader } from "@/components/preview/preview-header"
 import { FlowStepBar } from "@/components/flow-step-bar"
 import { BriefPlayer } from "@/components/preview/brief-player"
-import { PreviewClipStrip } from "@/components/preview/preview-clip-strip"
 import { LayoutPanel } from "@/components/preview/layout-panel"
 
 export default function PreviewPage() {
@@ -25,10 +24,9 @@ export default function PreviewPage() {
 
       {/* Body: two-column flex row */}
       <div className="flex flex-1 overflow-hidden">
-        {/* Left/Center: Video player area */}
-        <main className="flex-1 flex flex-col items-center gap-8 px-6 py-8 overflow-y-auto">
+        {/* Left/Center: Video player area — BriefPlayer only */}
+        <main className="flex-1 flex flex-col items-center justify-center px-6 py-8 overflow-y-auto">
           <BriefPlayer />
-          <PreviewClipStrip />
         </main>
 
         {/* Right: Layout Panel */}
