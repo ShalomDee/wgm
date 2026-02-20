@@ -26,7 +26,7 @@ export function SelectionBar({ count }: SelectionBarProps) {
         onClick={() => router.push("/editor")}
         className="flex items-center gap-2 bg-coral hover:bg-coral/90 text-primary-foreground px-5 py-2.5 rounded-lg text-sm font-sans font-medium transition-colors"
       >
-        Open in InsightCuts
+        Wrap it up
         <ArrowRight className="w-4 h-4" />
       </button>
     </div>

@@ -1,5 +1,5 @@
+import { AppHeader } from "@/components/app-header"
 import { FlowStepBar } from "@/components/flow-step-bar"
-import { EditorHeader } from "@/components/editor/editor-header"
 import { VideoPlayer } from "@/components/editor/video-player"
 import { TranscriptPanel } from "@/components/editor/transcript-panel"
 import { AnnotationSidebar } from "@/components/editor/annotation-sidebar"
@@ -14,7 +14,7 @@ const markers = [
 export default function EditorPage() {
   return (
     <div className="flex flex-col h-screen overflow-hidden bg-background text-foreground">
-      <EditorHeader />
+      <AppHeader />
       <FlowStepBar currentStep={2} />
 
       <div className="flex flex-1 overflow-hidden">

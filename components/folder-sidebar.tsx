@@ -35,10 +35,10 @@ const sessions: SessionFolder[] = [
 
 export function FolderSidebar() {
   return (
-    <aside className="w-64 shrink-0 border-r border-border bg-[#141414] flex flex-col overflow-hidden">
+    <aside className="w-[260px] shrink-0 border-r border-border bg-[#141414] flex flex-col overflow-hidden">
       <div className="px-4 py-3 border-b border-border">
         <p className="text-xs font-mono text-muted-foreground uppercase tracking-wider">
-          Project
+          PROJECT
         </p>
         <p className="text-sm font-sans font-medium text-foreground mt-1">
           In-Vehicle UX Study
@@ -47,7 +47,7 @@ export function FolderSidebar() {
 
       <div className="px-4 py-3 border-b border-border">
         <p className="text-xs font-mono text-muted-foreground uppercase tracking-wider">
-          Sprint
+          SPRINT
         </p>
         <p className="text-sm font-sans font-medium text-foreground mt-1">
           Q1 2025 / Sessions
@@ -100,7 +100,7 @@ export function FolderSidebar() {
 
       <div className="px-4 py-3 border-t border-border">
         <p className="text-[10px] font-mono text-muted-foreground">
-          8 sessions &middot; 24 clips
+          8 sessions / 24 clips
         </p>
       </div>
     </aside>

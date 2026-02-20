@@ -1,5 +1,5 @@
+import { AppHeader } from "@/components/app-header"
 import { FlowStepBar } from "@/components/flow-step-bar"
-import { PreviewHeader } from "@/components/preview/preview-header"
 import { BriefPlayer } from "@/components/preview/brief-player"
 import { PreviewClipStrip } from "@/components/preview/preview-clip-strip"
 
@@ -7,7 +7,7 @@ export default function PreviewPage() {
   return (
     <div className="flex flex-col h-screen bg-background">
       {/* Header */}
-      <PreviewHeader />
+      <AppHeader />
       <FlowStepBar currentStep={4} />
 
       {/* Breadcrumb bar */}

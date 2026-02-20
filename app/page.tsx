@@ -2,6 +2,7 @@ import { AppHeader } from "@/components/app-header"
 import { FlowStepBar } from "@/components/flow-step-bar"
 import { FolderSidebar } from "@/components/folder-sidebar"
 import { VideoGrid } from "@/components/video-grid"
+import { TrimPanel } from "@/components/trim-panel"
 
 export default function Page() {
   return (
@@ -14,6 +15,7 @@ export default function Page() {
         <main className="flex flex-1 overflow-hidden">
           <VideoGrid />
         </main>
+        <TrimPanel />
       </div>
     </div>
   )
